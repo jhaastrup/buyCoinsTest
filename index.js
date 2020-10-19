@@ -6,7 +6,7 @@ const axios = require("axios");
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
   type Query {
-    calculatePrice(type: Exchange, margin: Float, exchangeRate: Int) : Float
+    calculatePrice(type: Exchange!, margin: Float!, exchangeRate: Int!) : Float
   }
   enum Exchange {
     buy
