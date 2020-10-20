@@ -8,7 +8,7 @@ var schema = buildSchema(`
   type Query {
     calculatePrice(type: Exchange!, margin: Float!, exchangeRate: Int!) : Float
   }
-  enum Exchange {
+   enum Exchange {
     buy
     sell
   }
@@ -38,11 +38,13 @@ var root = {
 
 };
 
-var app = express();
+const app = express();
 app.use('/graphiql', graphqlHTTP({
   schema: schema,
   rootValue: root,
   graphiql: true,
 }));
 app.listen(4000);
-console.log('Running a GraphQL API server at http://localhost:4000/graphql');
+console.log('Running a GraphQL API server at http://localhost:4000/graphiql'); 
+
+module.exports = app;
