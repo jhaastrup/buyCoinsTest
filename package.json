@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"npm start",
+    "start":"node ./build/index.js",
     "test": "jest"
   },
   "repository": {
